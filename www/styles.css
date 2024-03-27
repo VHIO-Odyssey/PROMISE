@@ -1,0 +1,134 @@
+
+
+:root {
+  --charcoal: #2C4251;
+  --shadow_blue: #8896AB;
+  --orange_peel: #FFA62B;
+  --slider_color: #8896AB;
+  --ochre: #CC7700;
+  --nav_color: #2b3e50;
+}
+
+body {
+	background-color: var(--shadow_blue);
+	font-size: 20px;
+}
+
+
+.h1 {
+	color:	var(--charcoal);
+	font-family: 'Fredoka One', cursive, important!;
+	font-weight: bolder;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.js-irs-0 .irs-single, .js-irs-0 .irs-bar-edge, .js-irs-0 .irs-bar {
+	border-top-color: var(--slider_color);
+	border-bottom-color: var(--slider_color);
+	border-color: var(--slider_color);
+	background: var(--slider_color);
+}
+
+
+.js-irs-1 .irs-single, .js-irs-1 .irs-bar-edge, .js-irs-1 .irs-bar {
+	border-top-color: var(--slider_color);
+	border-bottom-color: var(--slider_color);
+	border-color: var(--slider_color);
+	background: var(--slider_color);
+}
+
+
+.js-irs-2 .irs-single, .js-irs-2 .irs-bar-edge, .js-irs-2 .irs-bar {
+	border-top-color: var(--slider_color);
+	border-bottom-color: var(--slider_color);
+	border-color: var(--slider_color);
+	background: var(--slider_color);
+}
+
+.js-irs-3 .irs-single, .js-irs-3 .irs-bar-edge, .js-irs-3 .irs-bar {
+	border-top-color: var(--slider_color);
+	border-bottom-color: var(--slider_color);
+	border-color: var(--slider_color);
+	background: var(--slider_color);
+}
+
+
+.panel-body {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.slider {
+	display: flex;
+	align-items: flex-end;
+}
+
+
+.results{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	padding: 20px 30px;
+	margin:20px;
+	font-size: 30px;
+	color:var(--charcoal);
+	font-weight: bold;
+	background-color: var(--orange_peel);
+	border: 3px solid var(--ochre);
+	border-radius: 10px;
+}
+
+.card:hover {
+	background-color: var(--ochre);
+	border: 3px solid var(--orange_peel);
+
+}
+
+.patient-risk-details {
+	margin: 20px;
+}
+
+.promise-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	background-color: var(--charcoal);
+
+}
+
+.footer {
+	margin: 0 auto;
+	align-items: center;
+	font-size: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 30px;
+	background-color: var(--charcoal);
+}
+
+
+input[type='radio'] {
+    accent-color: var(--slider_color);
+}
+
+.about {
+	font-size: 15px;
+	padding: 20px;
+	text-indent: 0;
+}

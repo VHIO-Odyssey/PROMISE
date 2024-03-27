@@ -1,0 +1,132 @@
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="shinythemes/css/superhero.min.css">
+	<link href="styles.css" rel="stylesheet"/>	
+  	<script src="https://kit.fontawesome.com/3b2039f20a.js" crossorigin="anonymous"></script>
+
+  <title>PROMISE Score</title>
+
+
+</head>
+
+<body style="margin-left: 15px; margin-right: 15px">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid promise-nav">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h1>PROMISE</h1>
+	  <h4>Prognostic Score for Hospitalized Cancer Patients (PROMISE) Tool</h4>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+	<div class="about">
+		The objective of this tool is to predict the probability of mortality at 90 days after admission in oncologic metastatic patients with active treatment and unscheduled admission. The data used was from the study PLANTOLOGY (NCT05534178 at <a style="color: var(--charcoal)" href="https://clinicaltrials.gov/ct2/show/NCT05534178?term=plantology&draw=2&rank=1=">https://clinicaltrials.gov/ct2/show/NCT05534178?term=plantology&draw=2&rank=1=</a>) and approved by all the independent ethics committee at each center (Vall d'Hebron: PR(AG)92/2020). 
+		<br>
+		All laboratory parameters were collected within 24-48 hours from admission.
+		<br>
+		The inclusion criteria were:
+		<br>
+		<ul>
+			<li>
+				1. Unplanned hospitalization
+			</li>
+			<li>
+				2. Metastatic disease or unresectable
+			</li>
+			<li>
+				3. On active treatment (last 6 months prior to admission).
+			</li>
+			<li>
+				4. More than 18 years old.
+			</li>
+		</ul>
+	</div>
+	<div class="col">
+		<div class="panel panel-default">
+			<div class="panel-heading">Please select your patient characteristics:</div>
+			<div style="display:flex; flex-direction:column; padding:45px;">
+				<div style="display:flex; flex-direction:row;">
+					<div style="display:flex; flex-direction:column; width:33%;">
+						<div class="row" style="margin-bottom: 8px; font-size: 15px;">ECOG (performance status)</div>
+						<div class="row">{{ radio_ecog }}</div>
+					</div>
+					<div style="display:flex; flex-direction:column; width:33%;">
+						<div class="row" style="margin-bottom: 8px; font-size: 15px;">Oncologic treatment response</div>
+						<div class="row">{{ radio_oncotreat }}</div>
+					</div>
+				</div>
+				<div style="display:flex; flex-direction:row; margin-top:40px;">
+					<div style="display:flex; flex-direction:column; width:33%;">
+						<div class="row" style="margin-bottom: 8px; font-size: 12px;">LDH (U/L) (Lactate dehydrogenase)</div>
+						<div class="row">{{ slider_ldh }}</div>
+					</div>
+					<div style="display:flex; flex-direction:column; width:33%;">
+						<div class="row" style="margin-bottom: 8px; font-size: 12px;">PMN (Polymorphonuclear leukocyte)</div>
+						<div class="row">{{ slider_pmn }}</div>
+					</div>
+					<div style="display:flex; flex-direction:column; width:33%;">
+						<div class="row" style="margin-bottom: 8px; font-size: 12px;">Albumin (g/dL)</div>
+						<div class="row slider">{{ slider_album }}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="results">
+		<div class="card">
+			<h4><strong>Patient risk of 90-day mortality</strong></h4>
+			<h3><strong>{{ text_output_alive }}</strong></h3>
+		</div>
+		<div class="card">
+			<h4><strong>Risk category</strong></h4>
+			<h3><strong>{{ text_output_group }}</strong></h3>
+		</div>
+	</div>
+
+	<div class="panel panel-default patient-risk-details">
+		<div class="panel-body">
+		  Performance of 90-day mortality prediction in your patient
+		</div>
+	</div>
+	
+	<div class="col">
+		{{ plot }}
+	</div>
+
+	<div class="row" style="display: flex;">
+		<i class="fa-solid fa-circle-info" style="margin-top: 20px; margin-right: -10px; margin-left: 15px"></i>
+		<p class="about">
+			Each probability has been classified into high, intermediate and low. The high, intermediate and low risk curves depict the distribution of the classified patients as density plots.
+			<br/>
+			The overlap between the curves should be seen as the relative frequency that a predicted probability belongs to a given group. For example: A patient with 27% probability is very unlikely in the 'low risk' group (extreme value in the left tail) while very more likely in the 'intermediate risk' group (in the hump of the group distribution).
+	</div>
+
+	<div class="panel panel-default patient-risk-details">
+	  <div class="panel-body">
+		{{ text_output_prisk }}
+	  </div>
+	</div>
+
+
+
+</div>
+
+<div class="row footer">
+	<div class="row contact">Contact us at <a href="mailto:info.promise@vhio.net">info.promise@vhio.net</a></div>
+	<br>
+	<div class="row">Coded by Odyssey (Oncology Data Science Team in Vall d'Hebron Institute of Oncology) - Code available at GitHub<a href="https://github.com/VHIO-Odyssey/PROMISE"><i class="fa-brands fa-github" style="color: white; margin-left: 6px;"></i></a></div>
+</div>
+
+</body>
+
+
