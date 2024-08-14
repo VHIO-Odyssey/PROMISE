@@ -132,3 +132,10 @@ input[type='radio'] {
 	padding: 20px;
 	text-indent: 0;
 }
+
+.about-text {
+	text-align: justify;
+	font-size: 10px;
+	padding: 30px;
+}
+
