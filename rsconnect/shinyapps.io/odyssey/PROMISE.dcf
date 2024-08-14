@@ -5,7 +5,7 @@ account: odyssey
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11557735
-bundleId: 8982144
+bundleId: 8983002
 url: https://odyssey.shinyapps.io/PROMISE/
 version: 1
 asMultiple: FALSE
