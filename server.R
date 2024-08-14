@@ -21,7 +21,7 @@ preds2 <- ifelse(preds1<cutoff1, "low",ifelse(preds1>cutoff2,"High","intermediat
 
 
 
-shinyServer(function(input, output){
+server <- (function(input, output){
 
     model2 <- reactive({
         
